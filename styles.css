@@ -1,0 +1,25 @@
+* { box-sizing: border-box; }
+:root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #242424; background: #fff; }
+body { margin: 0; line-height: 1.6; }
+a { color: inherit; text-underline-offset: 4px; }
+a:focus-visible { outline: 3px solid #522d80; outline-offset: 5px; }
+.container { width: min(1100px, calc(100% - 48px)); margin-inline: auto; }
+.page-header { border-top: 5px solid #f56600; border-bottom: 1px solid #e9e6e2; padding: 48px 0 27px; background: #faf9f7; }
+.course { margin: 0 0 8px; color: #666; font-size: .9rem; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.2; letter-spacing: -.04em; margin: 0; font-weight: 700; }
+nav { display: flex; gap: 26px; margin-top: 24px; font-size: .95rem; }
+nav a { text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { padding-top: 42px; }
+section { scroll-margin-top: 24px; margin-bottom: 44px; }
+h2 { font-size: 1.4rem; letter-spacing: -.02em; margin: 0 0 22px; }
+.team-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; list-style: none; padding: 0; margin: 0; }
+.team-grid img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: center 35%; border-radius: 8px; background: #eee; }
+h3 { font-size: .95rem; line-height: 1.45; font-weight: 600; margin: 13px 0 0; }
+.document-link { display: inline-flex; align-items: center; gap: 8px; color: #914000; text-decoration: none; }
+.document-link:hover { text-decoration: underline; }
+footer { padding: 22px 0 28px; border-top: 1px solid #e9e6e2; color: #707070; font-size: .8rem; }
+.skip-link { position: absolute; top: -100px; left: 16px; padding: 8px 14px; background: white; z-index: 1; }
+.skip-link:focus { top: 12px; }
+@media (max-width: 800px) { .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .container { width: calc(100% - 36px); } .page-header { padding-top: 32px; } .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 18px; } footer { font-size: .75rem; } }
